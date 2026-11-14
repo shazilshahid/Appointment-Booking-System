@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Appointment Booking System</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Appointment System</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-warning" href="login.html" onclick="logout()">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
+    <div class="container">
+      <a class="navbar-brand" href="#">Appointment System</a>
+      <div class="d-flex gap-2">
+        <button id="show-client" class="btn btn-outline-primary btn-sm">Client</button>
+        <button id="show-admin" class="btn btn-outline-secondary btn-sm">Admin</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <!-- Client Section -->
+    <section id="client-view">
+      <h3>Request an Appointment</h3>
+      <form id="booking-form" class="mb-4">
+        <div class="mb-3">
+          <label for="client-name" class="form-label">Your Name</label>
+          <input id="client-name" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label for="client-email" class="form-label">Your Email</label>
+          <input id="client-email" type="email" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label for="date-time" class="form-label">Appointment Date & Time</label>
+          <input id="date-time" type="datetime-local" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Message (Optional)</label>
+          <textarea id="message" class="form-control"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Request</button>
+      </form>
+
+      <h5>Your Requests</h5>
+      <div id="client-requests" class="list-group"></div>
+    </section>
+
+    <!-- Admin Section -->
+    <section id="admin-view" style="display:none;">
+      <h3>Admin — Pending Requests</h3>
+      <div id="admin-requests" class="list-group mb-4"></div>
+
+      <h5>All Requests</h5>
+      <div id="all-requests" class="list-group"></div>
+    </section>
+  </main>
+  <main class="container">
+  <!-- Login Section -->
+  <section id="login-view">
+    <h3>Login</h3>
+    <form id="login-form" class="mb-4">
+      <div class="mb-3">
+        <label for="role" class="form-label">I am a</label>
+        <select id="role" class="form-select" required>
+          <option value="">-- Select Role --</option>
+          <option value="client">Client</option>
+          <option value="admin">Vendor (Admin)</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input id="email" type="email" class="form-control" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+  </section>
+
+  <!-- Client Section -->
+  <section id="client-view" style="display:none;">
+    <!-- (same as before) -->
+  </section>
+
+  <!-- Admin Section -->
+  <section id="admin-view" style="display:none;">
+    <!-- (same as before) -->
+  </section>
+</main>
+
+
+
+  <footer class="text-center py-3">
+    <small>Frontend-only version — requests are not saved without backend.</small>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

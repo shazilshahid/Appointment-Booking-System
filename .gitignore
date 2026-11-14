@@ -1,0 +1,20 @@
+
+# Python virtual environment
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Environment variables
+.env
+
+# Node modules
+node_modules/
+
+# VS Code settings
+.vscode/
+
+# SQLite database
+*.sqlite3

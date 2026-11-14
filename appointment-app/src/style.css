@@ -1,0 +1,67 @@
+/* Custom styling */
+body {
+  background-color: #f8f9fa;
+}
+
+main {
+  max-width: 900px;
+  margin-bottom: 40px;
+}
+
+.list-group-item .meta {
+  font-size: 0.85rem;
+  color: #6c757d;
+}
+
+.btn-small {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.85rem;
+}
+/* Navbar */
+.navbar {
+  padding: 0.8rem 1rem;
+}
+.navbar-brand {
+  font-size: 1.4rem;
+}
+.nav-link {
+  transition: 0.3s;
+}
+.nav-link:hover {
+  color: #ffdd57 !important;
+}
+
+/* Card design */
+.card {
+  border: none;
+  border-radius: 1rem;
+}
+.card h3 {
+  font-weight: 600;
+}
+
+/* Buttons */
+.btn {
+  border-radius: 0.5rem;
+  transition: all 0.3s ease-in-out;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Inputs */
+.form-control, .form-select {
+  border-radius: 0.5rem;
+  border: 1px solid #ddd;
+  padding: 0.7rem;
+}
+.form-control:focus, .form-select:focus {
+  border-color: #0d6efd;
+  box-shadow: 0px 0px 5px rgba(13,110,253,0.3);
+}
+
+/* Background gradient for login page */
+#login-view {
+  background: linear-gradient(135deg, #e3f2fd, #fce4ec);
+}
